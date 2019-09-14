@@ -1,3 +1,19 @@
+<div class="column is-half">
+  <% if user_signed_in? %>
+	<article class="media box">
+		<figure class="media-left">
+			<p class="image is-64x64">
+				<img src="https:bulma.io/images/placeholders/64x64.png">
+			</p>
+		</figure>
+		<div class="media-content">
+			 <%= render 'chirps/form' %>
+		</div>
+	</article>
+  <% end %>
+
+
+
 <%@chirps.each do |chirp|%>
     <div class="box">
         <article class="media">
