@@ -1,7 +1,12 @@
 <section class="section">
     <container>
        <div class="columns">
-           <%=render 'feed' %>
+           <% if user_signed_in? %>
+    		<%= render 'profile' %>
+    		<%=render 'feed' %>
+    	   <% else %>
+    	   <div>Welcome to Tweety. Log In or Sign Up!</div>
+           <% end %>
        </div>
     </container>
 </section>
